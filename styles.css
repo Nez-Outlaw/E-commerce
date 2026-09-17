@@ -77,14 +77,14 @@ li {
 }
 
 header {
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
+  padding-bottom: 12vw;
 }
 
 .header__container {
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -133,7 +133,8 @@ button:active {
 
 .header__img--wrapper {
   padding: 20px;
-  max-width: 600px;
+  z-index: 2;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
 }
@@ -169,6 +170,19 @@ HIGHLIGHTS
   top: 1px;
   left: 0;
   transform: translateY(-100%);
+}
+
+#highlight::after {
+  background: url("./assets/wave (1).svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  width: 101vw;
+  height: 12vw;
+  bottom: 1px;
+  left: 0;
+  transform: translateY(100%);
 }
 
 .highlight__wrapper {
